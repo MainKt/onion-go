@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/missing.css">
+    <title>Cancer Research | The University Of Nuremberg</title>
+</head>
+
+<body>
+    <header>
+        <h1><span class="allcaps">University of Nuremberg</span></h1>
+        <sub-title>The Missing Cancer Research Institute</sub-title>
+        <nav>
+            <p class="tool-bar">
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#contact">Contact</a>
+            </p>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to the University of Nuremberg's Cancer Research Department. We are committed to advancing
+                oncological knowledge through innovative research and collaborative efforts. Our mission is to unravel
+                the complexities of cancer, develop cutting-edge treatments, and improve patient outcomes globally. By
+                fostering interdisciplinary collaborations, we bring together experts from diverse fields to tackle
+                cancer's multifaceted challenges. Through rigorous research, clinical trials, and educational
+                initiatives, we strive to make significant contributions to the field of oncology. Our goal is to offer
+                hope and solutions to individuals affected by cancer, ensuring a brighter future through scientific
+                innovation and compassionate care.</p>
+        </section>
+
+        <section id="research">
+            <h2>Our Research</h2>
+            <p>Our research at the University of Nuremberg’s Cancer Research Department is at the forefront of
+                oncological science, dedicated to unraveling the complexities of cancer and developing innovative
+                solutions to combat it. We employ a multidisciplinary approach, bringing together scientists,
+                clinicians, and researchers from various fields to foster groundbreaking discoveries. Our team is
+                engaged in diverse research areas, including molecular biology, genetics, immunology, and
+                bioinformatics, aiming to understand the underlying mechanisms of cancer development, progression, and
+                metastasis.
+
+                Through state-of-the-art facilities and advanced technologies, we conduct pioneering studies in cancer
+                genomics, proteomics, and personalized medicine. Our research includes the development of novel
+                therapeutic strategies, targeted therapies, and immunotherapies designed to enhance the efficacy of
+                treatments while minimizing side effects. We are also dedicated to advancing early detection methods,
+                improving diagnostic tools, and exploring new biomarkers that can predict disease progression and
+                response to therapy.
+
+                In addition to basic and translational research, our department is actively involved in clinical trials,
+                bridging the gap between laboratory discoveries and patient care. We collaborate with national and
+                international research institutions, healthcare providers, and pharmaceutical companies to accelerate
+                the translation of research findings into clinical applications. Our ultimate goal is to enhance cancer
+                treatment outcomes, reduce mortality rates, and improve the quality of life for cancer patients
+                worldwide.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Access Research Data</h3>
+        <form action="/research" method="post" class="box">
+            <label for="password">Enter Passkey:
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Unlock</button>
+            </label>
+            {{if .InvalidPassword}}
+            <div class="box bad">
+                Invalid Passkey
+            </div>
+            {{end}}
+        </form>
+    </footer>
+    <footer>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>For inquiries or more information about our research, please contact us at <a
+                    href="tel:+918618497080">+91 86184 97080</a>.</p>
+        </section>
+        <p>&copy; 1997 University of Nuremberg. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
