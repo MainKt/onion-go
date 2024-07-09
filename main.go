@@ -6,9 +6,15 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	if err := godotenv.Load(); err != nil {
+		log.Fatalf("Error loading .env file")
+	}
+
 	fs := http.FileServer(http.Dir("./static"))
 	http.Handle("GET /static/", http.StripPrefix("/static/", fs))
 
