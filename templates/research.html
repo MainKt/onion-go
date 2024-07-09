@@ -80,7 +80,7 @@
                     question everything.
                 </p>
             </section>
-            <img src="static/mri.avif" alt="what's an avif now?" />
+            <img src="static/dmeq.avif" alt="You probably need dmeq" />
         </article>
         <br>
 
@@ -90,9 +90,9 @@
             </header>
             <section>
                 <p>
-                    Weeks have passed, and the toll of these treatments is evident. She has grown weaker, both
-                    physically and mentally. She talks less, often staring blankly at the ceiling. Her once-bright eyes
-                    are now clouded with confusion and pain. I see the suffering I've caused, but I can't stop. Every
+                    Weeks have passed, and the toll of these treatments is evident. She has grown weaker, both physically and mentally. She talks less, often staring blankly at
+                    the ceiling. Her once-bright eyes are now clouded with confusion and pain. I see the suffering I've
+                    caused, but I can't stop. Every
                     moment is a reminder of my failure to protect her from the initial incident. I sit by her bed,
                     holding her hand, praying for a miracle. I don’t know how much more she can take, but I can’t lose
                     hope. Not yet.
@@ -124,7 +124,8 @@
             </header>
             <section>
                 <p>
-                    It's been months since I started this journey. The tumor has receded slightly, but at what cost? Her
+                    It's been months since I started this journey. The <span class="animate-text"></span> has receded
+                    slightly, but at what cost? Her
                     mind is fractured, her body frail. I am left to ponder the ethical boundaries I crossed. The once
                     clear line between right and wrong is now blurred. I wanted to save her, but have I only prolonged
                     her suffering? I spend sleepless nights replaying every decision, every treatment. I wanted to be
@@ -133,6 +134,13 @@
             </section>
         </article>
         <br>
+
+        <style>
+            .animate-text::before {
+                content: "tumor";
+                animation: doSomethingAwesome 50s infinite;
+            }
+        </style>
 
         <article>
             <header>
@@ -174,10 +182,24 @@
         <section id="contact">
             <h2>Contact Us</h2>
             <p>For inquiries or more information about our research, please contact us at <a
-                    href="tel:+918618497080">+91 86184 97080</a>.</p>
+                    href="tel:+9186184fsl80">+91 86184 97080</a>.</p>
         </section>
         <p>&copy; 1997 University of Nuremberg. All rights reserved.</p>
     </footer>
+    <style>
+        @keyframes doSomethingAwesome {
+
+            0%,
+            50% {
+                content: "tumor";
+            }
+
+            25%,
+            75% {
+                content: "hbspk";
+            }
+        }
+    </style>
 </body>
 
 </html>

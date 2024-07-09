@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/missing.css">
-    <title>Cancer Research | The University Of Nuremberg</title>
+    <title>University ->Yv<- Nuremberg</title>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <sub-title>The Missing Cancer Research Institute</sub-title>
         <nav>
             <p class="tool-bar">
-                <a href="#about">About</a>
+                <a href="https://ayrff.com">About</a>
                 <a href="#research">Research</a>
                 <a href="#contact">Contact</a>
             </p>
@@ -22,7 +22,7 @@
     </header>
 
     <main>
-        <section id="about">
+        <section id="ayrff">
             <h2>About Us</h2>
             <p>Welcome to the University of Nuremberg's Cancer Research Department. We are committed to advancing
                 oncological knowledge through innovative research and collaborative efforts. Our mission is to unravel
@@ -43,14 +43,28 @@
                 engaged in diverse research areas, including molecular biology, genetics, immunology, and
                 bioinformatics, aiming to understand the underlying mechanisms of cancer development, progression, and
                 metastasis.
+                {{if .InvalidPassword}}
+                <style>
+                    @keyframes silly {
 
+                        0%,
+                        50% {
+                            content: "key";
+                        }
+
+                        25%,
+                        75% {
+                            content: "bsw";
+                        }
+                    }
+                </style>
+                {{end}}
                 Through state-of-the-art facilities and advanced technologies, we conduct pioneering studies in cancer
                 genomics, proteomics, and personalized medicine. Our research includes the development of novel
                 therapeutic strategies, targeted therapies, and immunotherapies designed to enhance the efficacy of
                 treatments while minimizing side effects. We are also dedicated to advancing early detection methods,
                 improving diagnostic tools, and exploring new biomarkers that can predict disease progression and
                 response to therapy.
-
                 In addition to basic and translational research, our department is actively involved in clinical trials,
                 bridging the gap between laboratory discoveries and patient care. We collaborate with national and
                 international research institutions, healthcare providers, and pharmaceutical companies to accelerate
@@ -64,13 +78,13 @@
     <footer>
         <h3>Access Research Data</h3>
         <form action="/research" method="post" class="box">
-            <label for="password">Enter Passkey:
+            <label for="password">Enter Passspan:
                 <input type="password" id="password" name="password" required>
                 <button type="submit">Unlock</button>
             </label>
             {{if .InvalidPassword}}
             <div class="box bad">
-                Invalid Passkey
+                Invalid Pass<span class="goose"></span>
             </div>
             {{end}}
         </form>
@@ -83,6 +97,14 @@
         </section>
         <p>&copy; 1997 University of Nuremberg. All rights reserved.</p>
     </footer>
+    {{if .InvalidPassword}}
+    <style>
+        .goose::before {
+            content: "key";
+            animation: silly 100s infinite;
+        }
+    </style>
+    {{end}}
 </body>
 
 </html>
