@@ -14,7 +14,7 @@
         <sub-title>The Missing Cancer Research Institute</sub-title>
         <nav>
             <p class="tool-bar">
-                <a href="https://ayrff.com">About</a>
+                <a href="https://ayrff" target="_blank">About</a>
                 <a href="#research">Research</a>
                 <a href="#contact">Contact</a>
             </p>
@@ -48,11 +48,11 @@
                     @keyframes silly {
 
                         0%,
-                        50% {
+                        25% {
                             content: "key";
                         }
 
-                        25%,
+                        50%,
                         75% {
                             content: "bsw";
                         }
@@ -78,13 +78,13 @@
     <footer>
         <h3>Access Research Data</h3>
         <form action="/research" method="post" class="box">
-            <label for="password">Enter Passspan:
+            <label for="password">Enter Passskey:
                 <input type="password" id="password" name="password" required>
                 <button type="submit">Unlock</button>
             </label>
             {{if .InvalidPassword}}
             <div class="box bad">
-                Invalid Pass<span class="goose"></span>
+		    Invalid Pass<span class="goose"></span>! {{.Prompt}}
             </div>
             {{end}}
         </form>
@@ -92,8 +92,7 @@
     <footer>
         <section id="contact">
             <h2>Contact Us</h2>
-            <p>For inquiries or more information about our research, please contact us at <a
-                    href="tel:+918618497080">+91 86184 97080</a>.</p>
+	    <p>For inquiries or more information about our research, please contact us at <a href="tel:+91{{.Phone}}">+91 {{.Phone}}</a>.</p>
         </section>
         <p>&copy; 1997 University of Nuremberg. All rights reserved.</p>
     </footer>
@@ -101,7 +100,7 @@
     <style>
         .goose::before {
             content: "key";
-            animation: silly 100s infinite;
+            animation: silly 10s infinite;
         }
     </style>
     {{end}}

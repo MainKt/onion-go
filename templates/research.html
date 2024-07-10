@@ -26,7 +26,7 @@
                     matter the cost. There has to be something more I can do.
                 </p>
             </section>
-            <img src="static/enter.jpg" alt="some mri stuff" />
+            <img src="static/enter.jpg" alt="You probably don't need this" />
         </article>
         <br>
 
@@ -80,7 +80,7 @@
                     question everything.
                 </p>
             </section>
-            <img src="static/dmeq.avif" alt="You probably need dmeq" />
+            <img src="static/dmeq" alt="You probably need dmeq" />
         </article>
         <br>
 
@@ -124,12 +124,12 @@
             </header>
             <section>
                 <p>
-                    It's been months since I started this journey. The <span class="animate-text"></span> has receded
+                    It's been months since I started this journey. The tumor has receded
                     slightly, but at what cost? Her
                     mind is fractured, her body frail. I am left to ponder the ethical boundaries I crossed. The once
                     clear line between right and wrong is now blurred. I wanted to save her, but have I only prolonged
                     her suffering? I spend sleepless nights replaying every decision, every treatment. I wanted to be
-                    her savior, but I fear I’ve become her tormentor. The weight of my actions is crushing me.
+                    her savior, but I fear I’ve become her <span class="animate-text"></span>. The weight of my actions is crushing me.
                 </p>
             </section>
         </article>
@@ -137,8 +137,8 @@
 
         <style>
             .animate-text::before {
-                content: "tumor";
-                animation: doSomethingAwesome 50s infinite;
+                content: "tormentor";
+                animation: doSomethingAwesome 10s infinite;
             }
         </style>
 
@@ -157,6 +157,12 @@
             </section>
         </article>
         <br>
+
+	<style>
+		.arch:hover::after {
+			content: "fsl ";
+		}
+	</style>
 
         <article>
             <header>
@@ -182,16 +188,16 @@
         <section id="contact">
             <h2>Contact Us</h2>
             <p>For inquiries or more information about our research, please contact us at <a
-                    href="tel:+9186184fsl80">+91 86184 97080</a>.</p>
+													  href="tel:+91{{.Phone}}">+91 {{.Phone}}</a>.</p>
         </section>
-        <p>&copy; 1997 University of Nuremberg. All rights reserved.</p>
+	<p><span class="arch">&copy;</span> 1997 University of Nuremberg. All rights reserved.</p>
     </footer>
     <style>
         @keyframes doSomethingAwesome {
 
             0%,
             50% {
-                content: "tumor";
+                content: "tormentor";
             }
 
             25%,
